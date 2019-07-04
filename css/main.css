@@ -1,0 +1,106 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: #727171;}
+li {list-style: none;}
+img {border: 0;}
+p,h2,h3 {color: #727171;}
+button {border: 0;}
+.hiden {position: absolute; left: -9999px;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'DM Sans', sans-serif;
+
+LG red : #c30037;
+LG gray : #727171;
+*/
+
+
+#header {text-align: center; width: 100%; height: 60px; background-color: #3b3f42;}
+#header #headerWrap {display: inline-block; width: 1280px;}
+#header .sitmap {position: relative; float: left; width: 60px; height: 60px; background-color: #565e6b;}
+#header .sitmap img {position: absolute; top : 50%; left: 50%; transform: translate(-50%, -50%);}
+#header h1 {float: left; padding-left: 50px; line-height: 60px;}
+#header #mainNav {padding-left: 70px; float: left; height: 60px;}
+#header #mainNav li {padding: 0 30px; float: left; height: 60px;}
+#header #mainNav li:hover {background: rgba(0, 0, 0, 0.3);}
+#header #mainNav li a {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #fff; line-height: 55px;}
+#header .search {position: relative; float: right;  width: 60px; height: 60px; background-color: #d80546;}
+#header .search img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#header .topBtn {position: fixed; right: 50px; bottom: 50px; z-index: 5;}
+
+#sectionWrap {text-align: center;} /* section 가운데 정렬 */
+
+#imgSlide {position: relative; margin: 0 auto; width: 1280px; height: 550px;}
+#imgSlide .imgSlide ul.slick-dots {position: absolute; left: 50%; bottom: 20px; transform: translate(-50%, -50%);}
+#imgSlide .imgSlide ul.slick-dots li {margin: 0 7px; float: left; width: 15px; height: 15px;}
+#imgSlide .imgSlide ul.slick-dots li button {width: 15px; height: 15px; border-radius: 50%; font-size: 0; line-height: 0; background-color: #fff;}
+#imgSlide .imgSlide ul.slick-dots li.slick-active button{background-color: #c30037;}
+
+#company .companyTitle {padding: 100px 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500;}
+#company .content {height: 240px;}
+#company .content > div {display: inline-block; position: relative; width: 290px; height: 240px; border: 1px solid rgba(0, 0, 0, 0.1);}
+#company .content .conts1 {margin: 5px; background-color: #f39898;}
+#company .content .conts1 img {padding-top: 40px; opacity: 0.6;}
+#company .content .conts1:hover img {opacity: 1;}
+#company .content .conts2 {margin: 5px; background-color: #f398c9;}
+#company .content .conts2 img {padding-top: 40px; opacity: 0.6;}
+#company .content .conts2:hover img {opacity: 1;}
+#company .content .conts3 {margin: 5px; background-color: #c998f3;}
+#company .content .conts3 img {padding-top: 40px; opacity: 0.6;}
+#company .content .conts3:hover img {opacity: 1;}
+#company .content .conts4 {margin: 5px; background-color: #989af3;}
+#company .content .conts4 img {padding-top: 40px; opacity: 0.6;}
+#company .content .conts4:hover img {opacity: 1;}
+#company .content .contBottom {position: absolute; bottom: 0; width: 288px; height: 60px; background-color: #fff;}
+#company .content .contBottom h3 {display: block; padding-left: 30px; float: left; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; line-height: 60px;}
+#company .content .contBottom:hover h3 {color: #c30037;}
+#company .content .contBottom img {float: right; padding : 16px 30px 0 0;}
+
+#product {display: inline-block; width: 1280px;}
+#product div {margin: 10px;}
+#product h3 {display: block; position: absolute; left: 50%; transform: translateX(-50%); z-index: 1; font-family: 'Roboto', sans-serif; padding-top: 10px;}
+#product img {width: 100%; height: 100%; transition: all 0.3s ease-in-out;}
+#product .productTitle {padding: 100px 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500;}
+#product .tvdisplay {overflow: hidden; display: block; position: relative; float: left; width: 620px; height: 600px;}
+#product .tvdisplay h3 {font-size: 24px; color: #000; font-weight: 300;}
+#product .tvdisplay:hover > img {transform: scale(1.02);}
+#product .itdisplay {overflow: hidden; display: block; position: relative; float: left; width: 300px; height: 300px;}
+#product .itdisplay h3 {font-size: 20px; color: #000; font-weight: 300;}
+#product .itdisplay:hover > img {transform: scale(1.02);}
+#product .mobiledisplay {overflow: hidden; display: block; position: relative; float: left; width: 300px; height: 300px;}
+#product .mobiledisplay h3 {font-size: 20px; color: #000; font-weight: 300;}
+#product .mobiledisplay:hover > img {transform: scale(1.02);}
+#product .commercialdisplay {overflow: hidden; display: block; position: relative; float: left; width: 620px; height: 290px;}
+#product .commercialdisplay h3 {font-size: 22px; color: #000; font-weight: 300;}
+#product .commercialdisplay:hover > img {transform: scale(1.02);}
+#product .autodisplay {overflow: hidden; display: block; position: relative; float: left; width: 620px; height: 290px;}
+#product .autodisplay h3 {font-size: 24px; color: #000; font-weight: 300;}
+#product .autodisplay:hover > img {transform: scale(1.02);}
+#product .oledlight {overflow: hidden; display: block; position: relative; float: left; width: 620px; height: 290px;}
+#product .oledlight h3 {font-size: 24px; color: #000; font-weight: 300;}
+#product .oledlight:hover > img {transform: scale(1.02);}
+
+#insights .insightsTitle {padding: 100px 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500;}
+#insights .conts {display: inline-block; margin: 0 7px 30px 7px; width: 290px; height: 290px; text-align: justify;}
+#insights .conts span {font-family: 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 300; color: #000;}
+#insights .conts p {padding: 8px; float: left; font-family: 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: 300;}
+#insights .conts2 {display: inline-block; margin-top: 30px; width: 1280px;}
+#insights .conts2 .fin {display: inline-block; position: relative; margin-right: 30px; width: 620px; height: 155px; background-color:#d80546;}
+#insights .conts2 .fin h3 {position: absolute; top: 15px; left: 50px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; color: #fff;}
+#insights .conts2 .fin p {display: block; position: relative; top: 50%; transform: translateY(-50%); padding: 15px; float: left; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; color: #fff;}
+#insights .conts2 .fin p span {padding-left: 30px; color:#f3ffb0;}
+#insights .conts2 .fin p em {font-size: 33px; font-weight: 500; color:#f3ffb0;}
+#insights .conts2 .fin a {position: relative; top: 50%; transform: translateY(-50%); float: left; padding: 10px;}
+#insights .conts2 .sns {display: inline-block;}
+#insights .conts2 .sns a {margin: 5px;}
+
+#footer {margin-top: 50px; width: 100%; height: 150px; background-color: #565e6b;}
+#footer .jungdo {padding: 50px 0 0 320px; float: left;}
+#footer .copyright {padding-top: 45px; float: left;}
+#footer ul li {float: left; background: url(../images/line.png) right no-repeat;}
+#footer ul li a {display: block; padding: 0 15px; font-family: 'Noto Sans KR', sans-serif; color: #fff;}
+#footer ul li a span {color: #f6c4d4;}
+#footer p {float: left; padding: 5px 0 0 15px; font-family: 'Noto Sans KR', sans-serif;  font-size: 13px; font-weight: 300; color: #fff;}
