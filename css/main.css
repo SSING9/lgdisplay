@@ -1,10 +1,12 @@
 @charset "utf-8";
+
+/* 초기화 */
 * {margin: 0; padding: 0; box-sizing: border-box;}
 a {text-decoration: none; color: #727171;}
 li {list-style: none;}
 img {border: 0;}
-p,h2,h3 {color: #727171;}
-button {border: 0;}
+p, h1, h2, h3, h4, h5 {color: #727171;}
+button {border: 0; outline: 0;}
 .hiden {position: absolute; left: -9999px;}
 .clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
 
@@ -17,28 +19,42 @@ LG red : #c30037;
 LG gray : #727171;
 */
 
-
-#header {text-align: center; width: 100%; height: 60px; background-color: #3b3f42;}
+/* 헤더 부분 */
+#header {position: relative; text-align: center; width: 100%; height: 60px; background-color: #3b3f42;}
 #header #headerWrap {display: inline-block; width: 1280px;}
-#header .sitmap {position: relative; float: left; width: 60px; height: 60px; background-color: #565e6b;}
 #header .sitmap img {position: absolute; top : 50%; left: 50%; transform: translate(-50%, -50%);}
-#header h1 {float: left; padding-left: 50px; line-height: 60px;}
-#header #mainNav {padding-left: 70px; float: left; height: 60px;}
-#header #mainNav li {padding: 0 30px; float: left; height: 60px;}
-#header #mainNav li:hover {background: rgba(0, 0, 0, 0.3);}
-#header #mainNav li a {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #fff; line-height: 55px;}
+#header h1 {float: left; margin-left: 50px; line-height: 60px;}
+#header #mainNav {margin-left: 70px; float: left;}
+#header #mainNav li {float: left;}
+#header #mainNav > ul > li > a {display: block; padding: 0 30px; font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 500; color: #fff; line-height: 60px;}
+#header #mainNav li:hover a {background: rgba(0, 0, 0, 0.3);}
 #header .search {position: relative; float: right;  width: 60px; height: 60px; background-color: #d80546;}
 #header .search img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #header .topBtn {position: fixed; right: 50px; bottom: 50px; z-index: 5;}
 
+/* 서브 네비 */
+#header #mainNav li .subNavWrap {display:none; position: absolute; top: 60px; left: 0; z-index: 5; padding: 30px 0; width: 100%; background-color: #292c2e;}
+#header #mainNav li .subNavWrap .subNavLayout {display: inline-block; width: 1280px;}
+#header #mainNav li .subNavWrap .subNavLayout .subNavConts {float: left; width: 260px; text-align: center;}
+#header #mainNav li .subNavWrap .subNavLayout .subNavConts p {display: inline-block; padding-top: 15px; width: 250px; color: #eee; font-weight: 300;}
+#header #mainNav li .subNavWrap .subNavLayout > ul > li {padding: 20px; float: left; width: 240px; text-align: left;}
+#header #mainNav li .subNavWrap .subNavLayout ul > li > a {padding: 15px; font-weight: 300; color: #999; background: url(../images/navdeco.png) right no-repeat;}
+#header #mainNav li .subNavWrap .subNavLayout ul > li:hover > a {color: #fff;}
+#header #mainNav li .subNavWrap .subNavLayout .subSubNav li {margin: 5px 0 0 10px; padding: 3px; width: 100%; text-align: left;}
+#header #mainNav li .subNavWrap .subNavLayout .subSubNav li a {font-size: 14px; font-weight: 300; color: #999; background: url(../images/dotdeco.png) left no-repeat;}
+#header #mainNav li .subNavWrap .subNavLayout .subSubNav li:hover a {color: #fff;}
+
+/* 섹션시작 */
 #sectionWrap {text-align: center;} /* section 가운데 정렬 */
 
+/* 이미지 슬라이더 */
 #imgSlide {position: relative; margin: 0 auto; width: 1280px; height: 550px;}
 #imgSlide .imgSlide ul.slick-dots {position: absolute; left: 50%; bottom: 20px; transform: translate(-50%, -50%);}
 #imgSlide .imgSlide ul.slick-dots li {margin: 0 7px; float: left; width: 15px; height: 15px;}
 #imgSlide .imgSlide ul.slick-dots li button {width: 15px; height: 15px; border-radius: 50%; font-size: 0; line-height: 0; background-color: #fff;}
 #imgSlide .imgSlide ul.slick-dots li.slick-active button{background-color: #c30037;}
 
+/* COMPANY 콘텐츠 */
 #company .companyTitle {padding: 100px 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500;}
 #company .content {height: 240px;}
 #company .content > div {display: inline-block; position: relative; width: 290px; height: 240px; border: 1px solid rgba(0, 0, 0, 0.1);}
@@ -59,6 +75,7 @@ LG gray : #727171;
 #company .content .contBottom:hover h3 {color: #c30037;}
 #company .content .contBottom img {float: right; padding : 16px 30px 0 0;}
 
+/* PRODUCT 콘텐츠 */
 #product {display: inline-block; width: 1280px;}
 #product div {margin: 10px;}
 #product h3 {display: block; position: absolute; left: 50%; transform: translateX(-50%); z-index: 1; font-family: 'Roboto', sans-serif; padding-top: 10px;}
@@ -83,6 +100,7 @@ LG gray : #727171;
 #product .oledlight h3 {font-size: 24px; color: #000; font-weight: 300;}
 #product .oledlight:hover > img {transform: scale(1.02);}
 
+/* INSIGHTS 콘텐츠 */
 #insights .insightsTitle {padding: 100px 0 30px 0; font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 500;}
 #insights .conts {display: inline-block; margin: 0 7px 30px 7px; width: 290px; height: 290px; text-align: justify;}
 #insights .conts span {font-family: 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 300; color: #000;}
@@ -97,6 +115,7 @@ LG gray : #727171;
 #insights .conts2 .sns {display: inline-block;}
 #insights .conts2 .sns a {margin: 5px;}
 
+/* 푸터 */
 #footer {margin-top: 50px; width: 100%; height: 150px; background-color: #565e6b;}
 #footer .jungdo {padding: 50px 0 0 320px; float: left;}
 #footer .copyright {padding-top: 45px; float: left;}
@@ -104,3 +123,5 @@ LG gray : #727171;
 #footer ul li a {display: block; padding: 0 15px; font-family: 'Noto Sans KR', sans-serif; color: #fff;}
 #footer ul li a span {color: #f6c4d4;}
 #footer p {float: left; padding: 5px 0 0 15px; font-family: 'Noto Sans KR', sans-serif;  font-size: 13px; font-weight: 300; color: #fff;}
+.portfolio {width: 100%; background: #3a3a3a;}
+.portfolio img {padding: 20px; width: 10%;}
